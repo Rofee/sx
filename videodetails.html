@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="mapp">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<link rel="stylesheet" href="lib/css/ionic.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/video-js.css" />
+		<script type="text/javascript" src="lib/js/ionic.min.js"></script>
+		<script type="text/javascript" src="lib/js/ionic.bundle.min.js"></script>
+		<script type="text/javascript" src="js/actionsheet.js"></script>
+		<script type="text/javascript" src="js/video.js" ></script>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script>
+			 videojs.options.flash.swf = "js/video-js.swf";
+		</script>
+	</head>
+
+	<body ng-controller="apCtrl">
+
+		<ion-header-bar>
+			<button class="button button-clear button-assertive ">
+				<i class="icon ion-chevron-left left fontfmy-hei fc-309143">  返回</i>
+			</button>
+			<p class="title" class="fontfmy-hei">视频详情</p>
+			<button class="button button-clear button-assertive fontfmy-hei fc-309143">举报</button>
+		</ion-header-bar>
+
+		<!--content-->
+		<ion-content class="scroll-content has-header">
+			<!-- 下拉刷新 
+			<ion-refresher pulling-text="下拉刷新.." on-refresh="doRefresh()"></ion-refresher>
+			<ion-list>
+				<ion-item ng-repeat="item in items"></ion-item>
+			</ion-list>
+			-->
+			
+			<div class="bg" style="height:48px;">
+				<div class="row">
+					<div class="col-10">
+						<img class="img-circle" src="img/bear.png" width="35" height="35" />
+					</div>
+					<div class="col" style="margin-top: 4px;">
+						<p class="fontwhite">大鹏</p>
+					</div>
+					<div class="col-35" style="margin-top: 10px;">
+						<p class="fontwhite" style="text-align: right;">2015年6月24日</p>
+					</div>
+				</div>
+			</div>
+			<!-- video -->
+			<div class="row responsive-sm margin-padding-auto">
+				
+					<video id="sample_video" class="col margin-padding-auto video-js vjs-default-skin vjs-big-play-centered" data-setup='{ "controls": true}'>
+                    <source src="video/video.mp4" type='video/mp4' />
+ 		</video>
+			</div>
+
+			<div class="bg-eaebec vdtintro" style="margin-top: -14px;">
+				<ul class="row">
+					<li class="col fc-5ca86a" style="font-size: 16px;">泰拳格斗式</li>
+					<li class="col-20">播放：111</li>
+					<li class="col-20">评论：88</li>
+				</ul>
+
+				<div class="row">
+					<p class="col" style="font-size: 13px;">
+						泰拳即泰国拳术，杀伤力大。泰拳(Muay Thai)是一门传奇的格斗技艺，是一项以力量与敏捷著称的运动。主要运用人体的拳、腿、膝、肘四肢八体作为八种武器进行攻击，出拳发腿、使膝用肘发力流畅顺达，力量展现极为充沛，攻击力猛锐。
+					</p>
+				</div>
+
+				<ul class="row pyzx">
+					<li class="col">
+						<a href="#">
+							<img src="img/comment.png" /> 评论</a>
+					</li>
+					<li class="col">
+						<a href="#">
+							<img src="img/invite.png" /> 邀请</a>
+					</li>
+					<li class="col">
+						<a onclick="showShare()">
+							<img src="img/forward.png" /> 转发</a>
+					</li>
+					<li class="col">
+						<a ng-click="showActionsheet(ix)">
+							<img src="img/like.png" /> 喜欢</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- tabs -->
+			<ul class="tabs row">
+				<li class="col margin-padding-auto">
+					<input type="radio" checked name="tabs" id="tab1">
+					<label for="tab1">教练点评</label>
+					<div id="tab-content1" class="tab-content animated fadeIn">
+						教练点评教练点评教练点评
+					</div>
+				</li>
+				<li class="col margin-padding-auto">
+					<input type="radio" name="tabs" id="tab2">
+					<label for="tab2">学员吐槽</label>
+					<div id="tab-content2" class="tab-content animated fadeIn">
+						学员吐槽学员吐槽学员吐槽 学员吐槽学员吐槽学员吐槽 学员吐槽学员吐槽学员吐槽 学员吐槽学员吐槽学员吐槽 学员吐槽学员吐槽学员吐槽 学员吐槽学员吐槽学员吐槽 学员吐槽学员吐槽学员吐槽 学员吐槽学员吐槽学员吐槽 学员吐槽学员吐槽学员吐槽
+					</div>
+				</li>
+			</ul>
+		
+		</ion-content>
+		
+		<!--ShareBox-->
+		<script>
+			function showShare(){
+				if($("#sharebox").css("display")=="none")
+					$("#sharebox").show();
+				
+			}
+			function hideShare(){
+				if($("#sharebox").css("display")=="block")
+					$("#sharebox").hide();
+			}
+		</script>
+		<div id="sharebox" style="display: none;">
+			<div style="position: absolute;width: 100%;height: 70%;background-color: red;opacity: 0.2;" onclick="hideShare()"></div>
+				<div style="height: 30%;width: 100%;position: absolute;top: 70%;background-color: white;left: 0px;">
+				<div class="row" style="text-align: center;" >
+					<div class="col"><img src="img/share-wechat.png"/><br/>微信朋友圈</div>
+					<div class="col"><img src="img/share-qzone.png"/><br/>QQ空间</div>
+					<div class="col"><img src="img/share-link.png"/><br/>复制链接</div>
+				</div>
+				<div class="row" style="border-top:#EDEEEE solid 1px;position: absolute;top: 75%;opacity:1.0;">
+					<button class="col button button-clear fontfmy-hei" style="color: #000000;" onclick="hideShare()">取消</button>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

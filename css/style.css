@@ -1,0 +1,116 @@
+	body {
+		font-family: "黑体";
+	} 
+	.fontfmy-hei{
+		font-family: "黑体";
+	}
+	a,a:hover {
+		text-decoration: none;
+		color: #333
+	}
+	.img-circle {
+		border-radius: 50%;
+	}
+	#sharebox img {
+		margin-top: 15px;
+	}
+
+	.fontwhite {
+		color: white;
+	}
+	.margin-padding-auto {
+		margin: 0;
+		padding: 0;
+	}
+	.pyzx li {
+		text-align: center;
+	}
+	.pyzx img {
+		vertical-align: middle;
+		margin-top: -6px;
+		width: 22px;
+		height: 22px;
+	}
+	.pyzx a {
+		color: #656565;
+	}
+	.vdtintro {
+		color: #656565;
+	}
+	/*font color*/
+	.fc-309143{
+		color: #309143;
+	}
+
+	.fc-5ca86a {
+		color: #5ca86a;
+	}
+	/*background-color*/
+	
+	.bg {
+		background-color: #545555;
+	}
+	.bg-eaebec {
+		background-color: #EAEBEC;
+	}
+	/*tabs*/
+	
+	.tabs input[type=radio] {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	.tabs {
+		float: none;
+		list-style: none;
+		position: relative;
+		padding: 0;
+		margin: 0px auto;
+	}
+
+	.tabs label {
+		display: block;
+		padding: 10px 20px;
+		color: #309143;
+		font-size: 18px;
+		font-weight: normal;
+		font-family: 'Lily Script One', helveti;
+		background: rgba(255, 255, 255, 0.2);
+		position: relative;
+		top: 3px;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+	.tabs label:hover {
+		background: rgba(255, 255, 255, 0.5);
+		top: 0;
+	}
+	[id^=tab]:checked + label {
+		background: #309143;
+		color: white;
+		top: 0;
+	}
+	[id^=tab]:checked ~ [id^=tab-content] {
+		display: block;
+	}
+	.tab-content {
+		z-index: 2;
+		display: none;
+		text-align: left;
+		width: 100%;
+		font-size: 20px;
+		line-height: 140%;
+		padding-top: 10px;
+		padding: 15px;
+		position: absolute;
+		top: 53px;
+		left: 0;
+		box-sizing: border-box;
+		-webkit-animation-duration: 0.5s;
+		-o-animation-duration: 0.5s;
+		-moz-animation-duration: 0.5s;
+		animation-duration: 0.5s;
+	}
+	
