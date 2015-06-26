@@ -45,6 +45,10 @@
 	.fc-5ca86a {
 		color: #5ca86a;
 	}
+	
+	.fc-blue{
+		color: blue;
+	}
 	/*background-color*/
 	
 	.bg {
@@ -100,12 +104,11 @@
 		display: none;
 		text-align: left;
 		width: 100%;
-		font-size: 20px;
 		line-height: 140%;
 		padding-top: 10px;
 		padding: 15px;
 		position: absolute;
-		top: 53px;
+		top: 33px;
 		left: 0;
 		box-sizing: border-box;
 		-webkit-animation-duration: 0.5s;
