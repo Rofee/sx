@@ -88,8 +88,9 @@
 		top: 0;
 	}
 	[id^=tab]:checked + label {
-		background: #309143;
-		color: white;
+		border-bottom: 1px solid #009689;
+		/*background: #309143;
+		color: white;*/
 		top: 0;
 	}
 	[id^=tab]:checked ~ [id^=tab-content] {
